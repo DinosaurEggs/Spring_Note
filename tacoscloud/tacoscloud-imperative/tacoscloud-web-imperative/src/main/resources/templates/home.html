@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud</title>
+</head>
+<body>
+<div id="HomeTitle">
+    <img th:src="@{/images/nakanomiku.jpg}"/>
+    <span style="font-size: 25px">&nbsp;&nbsp;Welcome!</span>
+    <span  style="font-size: 15px">User:</span>
+    <span style="font-size: 15px" th:text="${user.username}"></span>
+</div>
+<hr/>
+
+<div id="navigation">
+    <a th:href="design">Design</a>-
+    <a th:href="orders">History Orders</a>-
+    <a th:href="tacosapi">API</a><br/>
+
+    <div id="logout">
+        <a th:href="@{'/logout'}">Logout</a><!-- 方法一 -->
+        <!-- 方法二 -->
+        <!--    <form id="logoutForm" method="POST" th:action="@{/logout}">-->
+        <!--        <input type="submit" value="Logout"/>-->
+        <!--    </form>-->
+    </div>
+</div>
+</body>
+</html>

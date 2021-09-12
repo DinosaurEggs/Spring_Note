@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+<h3>·design</h3>
+<a th:href="@{/api/design/recent}">recent</a>
+<form method="post" th:action="@{/tacosapi}">
+    <!--    <input name="_csrf" th:value="${_csrf.token}" type="hidden"/>-->
+
+    <label for="tacosid">ID:</label>
+    <input id="tacosid" name="tacosid" type="text">
+
+    <input type="submit" value="submit">
+</form>
+</body>
+
+<script>
+
+</script>
+</html>

@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    template:
+      default-topic: tacocloud.orders.topic
+    producer:
+      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      valueSerializer: org.springframework.kafka.support.serializer.JsonSerializer
+    bootstrap-servers:
+      - localhosts:9092

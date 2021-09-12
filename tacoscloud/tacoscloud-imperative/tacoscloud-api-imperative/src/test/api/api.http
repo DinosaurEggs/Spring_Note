@@ -1,0 +1,16 @@
+### patch api/order/{id}
+PATCH http://localhost:8080/api/order/20
+Content-Type: application/json
+
+{
+  "deliveryZip": "88888888"
+}
+
+### get api/order/{id}
+GET http://localhost:8080/api/order/23
+
+### delete api/order/{id}
+DELETE http://localhost:8080/api/order/2
+
+### get api/design/recent/hateoas
+GET http://localhost:8080/api/design/recent/hateoas

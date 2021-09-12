@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+
+<div th:if="${error}">
+    Unable to login. Check your username and password.
+</div>
+
+<form id="loginForm" method="POST" th:action="@{/login}">
+    <!-- end::thAction[] -->
+    <label for="username">Username: </label>
+    <input id="username" name="username" type="text"/><br/>
+
+    <label for="password">Password: </label>
+    <input id="password" name="password" type="password"/><br/>
+
+    <input type="submit" value="Login"/>
+</form>
+<a th:href="@{/register}">register</a>
+</body>
+</html>

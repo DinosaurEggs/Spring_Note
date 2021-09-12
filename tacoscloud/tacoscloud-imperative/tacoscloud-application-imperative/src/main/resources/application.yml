@@ -1,0 +1,15 @@
+#优先级低于application.properties
+
+#日志等级
+logging:
+  level:
+    root: WARN
+    org:
+      springframework:
+        security: DEBUG
+
+#激活自定义配置文件
+spring:
+  profiles:
+    active:
+      - prop01

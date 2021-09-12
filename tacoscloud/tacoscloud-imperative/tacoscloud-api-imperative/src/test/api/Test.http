@@ -1,0 +1,35 @@
+PUT http://localhost:8080/api/order/21
+
+###
+POST http://localhost:8080/api/order/sendorder
+Content-Type: application/json
+
+{
+  "deliveryName": "a",
+  "deliveryStreet": "a",
+  "deliveryCity": "a",
+  "deliveryState": "a",
+  "deliveryZip": "a",
+  "ccNumber": "1",
+  "ccExpiration": "07/98",
+  "ccCVV": "3",
+  "tacos": [
+    {
+      "name": "7896321",
+      "ingredients": [
+        {
+          "id": "FLTO",
+          "name": "Flour Tortilla",
+          "type": "WRAP"
+        },
+        {
+          "id": "COTO",
+          "name": "Corn Tortilla",
+          "type": "WRAP"
+        }
+      ]
+    }
+  ]
+}
+
+

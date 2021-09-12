@@ -1,0 +1,6 @@
+URL: https://blog.csdn.net/wiselyman/article/details/107196875
+
+spring-boot-starter-web 与 spring-boot-starter-webflux 冲突
+使用不同的 spring-boot-starter-security 配置方式
+spring-boot-starter-data-rest 包含 spring-boot-starter-web
+URL: https://www.zhihu.com/question/462534264/answer/1916648512

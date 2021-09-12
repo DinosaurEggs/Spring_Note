@@ -1,0 +1,10 @@
+{
+  //自定义配置文件说明
+  "properties": [
+    {
+      "name": "taco.orders.pageSize",
+      "type": "java.lang.String",
+      "description": "Description for taco.orders.pageSize."
+    }
+  ]
+}
