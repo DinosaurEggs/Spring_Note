@@ -32,5 +32,19 @@ public class Taco implements Serializable
     @NotNull(message = "You must choose at least 1 ingredient")
     @Size(min = 1, message = "You must choose at least 1 ingredient")
     @Column("ingredient")
-    private List<IngredientUDT> ingredients = new ArrayList<>();//db_type: list<forzen<ingredient>>
+    private List<IngredientUDT> ingredients = new ArrayList<>();//db_type: list<frozen<ingredient>>
+
+    public TacoUDT toUDT()
+    {
+        return new TacoUDT(name,ingredients);
+    }
 }
+/*
+create table taco
+(
+    id uuid primary key,
+    createdat timestamp,
+    name text,
+    ingredients list<frozen<ingredient>>
+);
+ */

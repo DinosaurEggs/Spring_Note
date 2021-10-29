@@ -45,6 +45,11 @@ public class User implements UserDetails, Serializable
         this.phoneNumber = phoneNumber;
     }
 
+    public UserUDT toUDT()
+    {
+        return new UserUDT(username, phoneNumber);
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities()
     {
@@ -75,3 +80,12 @@ public class User implements UserDetails, Serializable
         return true;
     }
 }
+/*
+create table user
+(
+    id          uuid primary key,
+    password    text,
+    phonenumber text,
+    username    text
+)
+*/

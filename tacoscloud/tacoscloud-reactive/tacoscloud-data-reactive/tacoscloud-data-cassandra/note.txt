@@ -4,6 +4,6 @@ docker exec -it Cassandra /bin/bash
 config_dir:etc/cassandra/cassandra.yaml
 reboot
 
-cqlsh -n cassandra -p cassandra:
+cqlsh -u cassandra -p cassandra:
 ->CREATE USER root WITH PASSWORD '0415' SUPERUSER;
 ->DROP USER cassandra;

@@ -15,7 +15,7 @@ public class IngredientLoader
 
     public IngredientLoader(IngredientRepository ingredientRepository)
     {
-        ingredientRepository.findAll();
+        ingredientRepository.findAll().forEach(this.ingredients::add);
     }
 
     @Bean

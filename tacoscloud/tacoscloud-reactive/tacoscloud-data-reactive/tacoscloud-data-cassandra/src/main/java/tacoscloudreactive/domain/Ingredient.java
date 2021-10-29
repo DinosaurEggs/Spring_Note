@@ -29,3 +29,11 @@ public class Ingredient implements Serializable
         return new IngredientUDT(name, type);
     }
 }
+/*
+create table ingredient
+(
+	id text primary key,
+	name text,
+	type text
+);
+ */

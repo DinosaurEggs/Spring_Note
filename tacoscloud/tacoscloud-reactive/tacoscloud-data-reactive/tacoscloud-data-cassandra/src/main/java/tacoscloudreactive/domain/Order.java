@@ -26,7 +26,7 @@ public class Order implements Serializable
     private UUID id = Uuids.timeBased();
 
     @Column("user")
-    private UserUDT user;//db_type: forzen<user>
+    private UserUDT user;//db_type: frozen<user>
 
     private Date placedAt = new Date();//db_type: timestamp
 
@@ -55,10 +55,32 @@ public class Order implements Serializable
     private String ccCVV;
 
     @Column("taco")
-    private List<TacoUDT> tacos = new ArrayList<>();//db_type: list<forzen<taco>>
+    private List<TacoUDT> tacos = new ArrayList<>();//db_type: list<frozen<taco>>
 
-    public void addDesign(TacoUDT design)
+    public void addDesign(Taco design)
     {
-        this.tacos.add(design);
+        this.tacos.add(design.toUDT());
+    }
+
+    public void setUser(User user)
+    {
+        this.user = user.toUDT();
     }
 }
+/*
+create table orders
+(
+    id uuid primary key,
+    user frozen<user>,
+    createdat timestamp,
+    deliveryname text,
+    deliverystreet text,
+    deliverycity text,
+    deliverystate text,
+    deliveryzip text,
+    ccnumber text,
+    ccexpiration text,
+    cccvv text,
+    tacos list<frozen<taco>>
+);
+ */

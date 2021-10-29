@@ -11,7 +11,7 @@
     </parent>
 
     <packaging>jar</packaging>
-    <artifactId>tacoscloud-kitchen</artifactId>
+    <artifactId>tacoscloud-receiver</artifactId>
     <version>0.0.1-Alpha</version>
 
     <name>tacoscloud-kitchen</name>
