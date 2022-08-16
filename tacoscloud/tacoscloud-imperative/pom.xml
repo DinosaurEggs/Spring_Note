@@ -13,18 +13,24 @@
     <modules>
         <module>tacoscloud-application-imperative</module>
         <module>tacoscloud-data-imperative</module>
+        <module>tacoscloud-data-imperative/tacoscloud-data-jdbc</module>
+        <module>tacoscloud-data-imperative/tacoscloud-data-jpa</module>
+        <module>tacoscloud-data-imperative/tacoscloud-data-mybatis</module>
         <module>tacoscloud-api-imperative</module>
         <module>tacoscloud-web-imperative</module>
         <module>tacoscloud-security-imperative</module>
         <module>tacoscloud-messaging</module>
+        <module>tacoscloud-messaging/tacoscloud-messaging-jms</module>
+        <module>tacoscloud-messaging/tacoscloud-messaging-kafka</module>
+        <module>tacoscloud-messaging/tacoscloud-messaging-rabbitmq</module>
         <module>tacoscloud-datarest</module>
     </modules>
 
     <artifactId>tacoscloud-imperative</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 </project>

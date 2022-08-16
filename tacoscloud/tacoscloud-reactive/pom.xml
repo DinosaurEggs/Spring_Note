@@ -13,6 +13,8 @@
         <module>tacoscloud-application-reactive</module>
         <module>tacoscloud-api-reactive</module>
         <module>tacoscloud-data-reactive</module>
+        <module>tacoscloud-data-reactive/tacoscloud-data-cassandra</module>
+        <module>tacoscloud-data-reactive/tacoscloud-data-mongodb</module>
         <module>tacoscloud-security-reactive</module>
         <module>tacoscloud-web-reactive</module>
         <module>tacoscloud-cache-reactive</module>
@@ -21,8 +23,8 @@
     <artifactId>tacoscloud-reactive</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 </project>

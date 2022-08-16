@@ -44,6 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 .passwordEncoder(passwordEncoder());
     }
 
+    @SuppressWarnings("NonAsciiCharacters")
     @Override
     protected void configure(HttpSecurity http) throws Exception
     {

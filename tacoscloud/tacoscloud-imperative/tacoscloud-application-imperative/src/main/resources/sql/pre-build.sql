@@ -1,5 +1,11 @@
 # noinspection SqlWithoutWhere
 delete from ingredient;
+create table tacoscloud.ingredient
+    (
+        id VARCHAR(6) NOT NULL primary key ,
+        name VARCHAR(20),
+        type VARCHAR(20)
+    );
 insert into ingredient (id, name, type) values ('FLTO', 'Flour Tortilla', 'WRAP');
 insert into ingredient (id, name, type) values ('COTO', 'Corn Tortilla', 'WRAP');
 insert into ingredient (id, name, type) values ('GRBF', 'Ground Beef', 'PROTEIN');
