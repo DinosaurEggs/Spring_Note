@@ -50,7 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     {
         http    //路径权限
                 .authorizeRequests()
-                .antMatchers("/design", "/orders", "/orders/**").access("hasRole('ROLE_USER')")
+                .antMatchers("/user","/design", "/orders", "/orders/**").access("hasRole('ROLE_USER')")
                 .antMatchers("/").access("permitAll")
                 .antMatchers("/**").access("permitAll")
                 //登录

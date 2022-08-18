@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
 <head>
     <meta charset="UTF-8">
     <title>User Information</title>
 </head>
 <body>
+<h3>User Profile</h3>
+<hr/>
+<div id="user_info">
+    <form method="post" enctype="multipart/form-data" action="/user/upload">
+        <img th:src="@{'/user/file/' + ${user.username}}"><p/>
+        <input type="file" name="file">
+        <input type="submit" value="upload">
+    </form>
 
+    <p th:text="'User Name:&nbsp;'+${user.username}"></p>
+    <p th:text="'User Phone:&nbsp;'+${user.phoneNumber}"></p>
+</div>
+<hr/>
+<a th:href="@{'/'}">Back</a>
 </body>
 </html>
